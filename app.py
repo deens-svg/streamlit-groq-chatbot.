@@ -40,7 +40,7 @@ if prompt := st.chat_input("Tanyakan sesuatu tentang Data Science..."):
     client = Groq(api_key=api_key)
     try:
         response = client.chat.completions.create(
-            model="llama-3.3-70b-versatile",
+            model="llama3-8b-8192",
             messages=st.session_state.messages,
             temperature=0.7,
         )
