@@ -40,7 +40,7 @@ if prompt := st.chat_input("Tanyakan sesuatu tentang Data Science..."):
     client = Groq(api_key=api_key)
     try:
         response = client.chat.completions.create(
-            model="mixtral-8x7b-32768",
+            model="openai/gpt-oss-20b",
             messages=st.session_state.messages,
             temperature=0.7,
         )
